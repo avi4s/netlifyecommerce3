@@ -3,7 +3,7 @@ import {
   FETCH_CART_ITEMS,
   REMOVE_FROM_CART,
   UPDATE_QTY,
-} from "../Types";
+} from "../../Constants/Types";
 
 const addToCartItem = (item) => ({
   type: ADD_TO_CART,

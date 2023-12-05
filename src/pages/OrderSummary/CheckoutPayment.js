@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Card from "react-credit-cards";
-import "react-credit-cards/es/styles-compiled.css";
 import {
   formatCreditCardNumber,
   formatCVC,
@@ -87,8 +85,8 @@ const CheckoutPayment = ({ isOpen, isOpen2, setIsAlert, closeModal }) => {
     >
       <div className="App-payment bg-slate-300 p-8 rounded-md w-[45%]">
         <div className="flex justify-between">
-          <h1 className="font-bold text-center">
-            Please Enter your payment details
+          <h1 className="font-bold text-center text-2xl">
+            Please Enter your Payment Details
           </h1>
           <button
             className="text-white bg-red-500 px-4 ml-8 rounded-md"
@@ -98,15 +96,7 @@ const CheckoutPayment = ({ isOpen, isOpen2, setIsAlert, closeModal }) => {
           </button>
         </div>
 
-        <Card
-          number={number}
-          name={name}
-          expiry={expiry}
-          cvc={cvc}
-          focused={focused}
-          callback={handleCallback}
-        />
-        <form onSubmit={handleSubmit} className="">
+        <form onSubmit={handleSubmit} className="mt-10">
           <div className="form-group mt-2">
             <h2 className="font-bold">Name on card:</h2>
             <input

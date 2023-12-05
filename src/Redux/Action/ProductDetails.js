@@ -1,4 +1,7 @@
-import { PRODUCT_DETAILS_ERROR, PRODUCT_DETAILS_SUCCESS } from "../Types";
+import {
+  PRODUCT_DETAILS_ERROR,
+  PRODUCT_DETAILS_SUCCESS,
+} from "../../Constants/Types";
 import api from "../Api";
 
 const ProductDetailsSuccess = (res) => {

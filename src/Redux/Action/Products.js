@@ -1,5 +1,5 @@
 import api from "../Api";
-import { PRODUCT_ERROR, PRODUCT_SUCCESS } from "../Types";
+import { PRODUCT_ERROR, PRODUCT_SUCCESS } from "../../Constants/Types";
 
 const ProductSuccess = (res) => {
   return {

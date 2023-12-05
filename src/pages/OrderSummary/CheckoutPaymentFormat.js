@@ -1,51 +1,30 @@
-import Payment from "payment";
+import React from "react";
 
 function clearNumber(value = "") {
   return value.replace(/\D+/g, "");
 }
 
-const formatCreditCardNumber = (value) => {
+export function formatCreditCardNumber(value) {
   if (!value) {
     return value;
   }
 
-  const issuer = Payment.fns.cardType(value);
   const clearValue = clearNumber(value);
-  let nextValue;
+  let nextValue = "";
 
-  switch (issuer) {
-    case "amex":
-      nextValue = `${clearValue.slice(0, 4)} ${clearValue.slice(
-        4,
-        10
-      )} ${clearValue.slice(10, 15)}`;
-      break;
-    case "dinersclub":
-      nextValue = `${clearValue.slice(0, 4)} ${clearValue.slice(
-        4,
-        10
-      )} ${clearValue.slice(10, 14)}`;
-      break;
-    default:
-      nextValue = `${clearValue.slice(0, 4)} ${clearValue.slice(
-        4,
-        8
-      )} ${clearValue.slice(8, 12)} ${clearValue.slice(12, 19)}`;
-      break;
+  for (let i = 0; i < clearValue.length; i++) {
+    if (i > 0 && i % 4 === 0) {
+      nextValue += " ";
+    }
+    nextValue += clearValue[i];
   }
 
   return nextValue.trim();
-};
+}
 
-export function formatCVC(value, prevValue, allValues = {}) {
+export function formatCVC(value) {
   const clearValue = clearNumber(value);
-  let maxLength = 3;
-
-  if (allValues.number) {
-    const issuer = Payment.fns.cardType(allValues.number);
-  }
-
-  return clearValue.slice(0, maxLength);
+  return clearValue.slice(0, 3);
 }
 
 export function formatExpirationDate(value) {
@@ -57,4 +36,9 @@ export function formatExpirationDate(value) {
 
   return clearValue;
 }
-export { formatCreditCardNumber };
+const CheckoutPaymentFormat = () => {
+  // You can add any additional logic or JSX specific to your component here
+  return <div>This is a dummy component for export</div>;
+};
+
+export default CheckoutPaymentFormat;

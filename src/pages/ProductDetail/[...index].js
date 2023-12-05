@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Navbar from "@/Components/Navbar/Navbar";
 import ToastMessage from "../ToastMessage/ToastMessage";
-import cartActions from "../Redux/Action/CartAction";
-import productDetailsAction from "../Redux/Action/ProductDetails";
+import cartActions from "../../Redux/Action/CartAction";
+import productDetailsAction from "../../Redux/Action/ProductDetails";
 
 const ProductDetails = () => {
   const [products, setProducts] = useState("");

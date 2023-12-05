@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import { useDispatch, useSelector } from "react-redux";
-import productAction from "./Redux/Action/Products";
+import productAction from "../Redux/Action/Products";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [cartCount, setCartCount] = useState(0);

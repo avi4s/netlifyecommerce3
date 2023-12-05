@@ -54,7 +54,7 @@ const OrderSummary = (products) => {
         <h3 className="font-bold pb-8">Your Total: ${totalAmount}</h3>
         <button
           onClick={handleCheckout}
-          className="py-2 px-2 bg-blue-500 text-white hover:bg-blue-600 font-semibold rounded-lg w-64"
+          className="py-2 px-2 bg-red-500 text-white  font-semibold rounded-lg w-64"
         >
           Checkout
         </button>

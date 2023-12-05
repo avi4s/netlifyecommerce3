@@ -1,4 +1,4 @@
-const { PRODUCT_SUCCESS, PRODUCT_ERROR } = require("../Types");
+const { PRODUCT_SUCCESS, PRODUCT_ERROR } = require("../../Constants/Types");
 
 const initialState = {
   error: "",
