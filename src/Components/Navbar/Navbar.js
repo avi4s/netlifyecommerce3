@@ -54,7 +54,10 @@ const Navbar = () => {
       {menuOpen && (
         <div className=" flex items-center  z-50 ">
           <div className="bg-black bg-opacity-50 " onClick={closeModal}></div>
-          <div className="fixed top-0 left-0 h-full bg-gray-800 w-36 p-4 transform translate-x-0">
+          <div
+            className="fixed top-0 left-0 h-full  w-36 p-4 transform translate-x-0"
+            style={{ backgroundColor: `hsl(210, 40%, 30%)` }}
+          >
             <div className="flex flex-col mt-10">
               <Link href="/" className="text-white">
                 Home
