@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar p-4" style={{ background: "#94a3b8" }}>
+    <nav className="navbar bg-slate-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white font-bold text-xl">
           <Link href="/">Ecommerce</Link>
@@ -42,10 +42,7 @@ const Navbar = () => {
           />
         </div>
         {isOpen && (
-          <div
-            className="fixed top-0 left-0 h-full w-36 p-4 transform translate-x-0"
-            style={{ background: "#94a3b8" }}
-          >
+          <div className="fixed top-0 left-0 bg-slate-800 h-full w-36 p-4 transform translate-x-0">
             <Link href="/" className="block text-white">
               Home
             </Link>
