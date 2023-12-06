@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav style={{ backgroundColor: `hsl(210, 40%, 30%)` }}>
+      <nav className="bg-slate-400">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
             <Link href="/">
@@ -52,9 +52,9 @@ const Navbar = () => {
         </div>
       </nav>
       {menuOpen && (
-        <div className=" flex items-center  z-50 ">
+        <div className=" flex items-center justify-center z-50 ">
           <div className="bg-black bg-opacity-50 " onClick={closeModal}></div>
-          <div className="fixed top-0 left-0 h-full  w-36 p-4 transform translate-x-0">
+          <div className="fixed top-0 left-0 h-full bg-gray-800 w-36 p-4 transform translate-x-0">
             <div className="flex flex-col mt-10">
               <Link href="/" className="text-white">
                 Home
