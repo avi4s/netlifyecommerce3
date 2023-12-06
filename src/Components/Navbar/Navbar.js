@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="navbar p-4" style={{ background: "#94a3b8" }}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white font-bold text-xl">
-          <a href="/">Logo</a>
+          <a href="/">Ecommerce</a>
         </div>
         <div className="hidden md:flex space-x-4 ">
           <Link href="/" className="text-white">
@@ -35,14 +35,17 @@ const Navbar = () => {
             <span className="ml-1 text-white">{cartItems?.length}</span>
           </div>
         </div>
-        <div className="md:hidden">
+        <div className="sm:hidden">
           <GiHamburgerMenu
             onClick={toggleNavbar}
             className="text-white cursor-pointer"
           />
         </div>
         {isOpen && (
-          <div className="fixed top-0 left-0 h-full bg-slate-400 w-36 p-4 transform translate-x-0">
+          <div
+            className="fixed top-0 left-0 h-full w-36 p-4 transform translate-x-0"
+            style={{ background: "#94a3b8" }}
+          >
             <Link href="/" className="block text-white">
               Home
             </Link>
