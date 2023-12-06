@@ -1,18 +1,13 @@
 import ModalCart from "@/pages/ModalCart/ModalCart";
 import { FaShoppingCart } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const cartItems = useSelector((state) => state.cart_data.items);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
   const openModal = () => {
     setIsModalOpen(true);
   };
